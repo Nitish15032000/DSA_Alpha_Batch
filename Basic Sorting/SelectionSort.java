@@ -8,13 +8,16 @@ public class SelectionSort {
     }
 
     static void Selection(int[] arr) {
+        int last = arr.length -1 ;
         for (int i = 0; i < arr.length; i++) {
-            int max = Integer.MIN_VALUE;
-            for (int j = 0; j < arr.length-i; j++) {
-                if (max < ) {
-                    
+            int maxIndex = 0;
+            for (int j = 1; j < arr.length-i; j++) {
+                if (arr[maxIndex] < arr[j] ) {
+                    maxIndex = j;
                 }
             }
+            swap(arr, maxIndex, last);
+            last--;
         }
     }
 
