@@ -6,41 +6,49 @@ public class SpiralMatrix {
                 { 6, 0, 13, 17 },
                 { 7, 21, 14, 15 } };
 
-        spiral(matrix);
+        spiralPrint(4, 4, matrix);
     }
-
-    private static void spiral(int[][] matrix) {
-        int sr = 0;
-        int sc = 0;
-        int er = matrix.length - 1;
-        int ec = matrix[0].length - 1;
-        while (true) {
-            // top
-            for (int j = sc; j <= ec; j++) {
-                System.out.print(matrix[sr][j]);
+    
+    static void spiralPrint(int m, int n, int a[][])
+    {
+        int i, strow = 0, stcolumn = 0;
+ 
+        /*
+        m - ending row index
+        n - ending column index
+        i - iterator
+        */
+ 
+        while (strow < m && stcolumn < n) {
+            // Print the first row from the remaining rows
+            for (i = stcolumn; i < n; ++i) {
+                System.out.print(a[strow][i] + " ");
             }
-
-            // right
-            for (int i = sr + 1; i <= er; i++) {
-                System.out.print(matrix[i][ec]);
+            strow++;
+ 
+            // Print the last column from the remaining
+            // columns
+            for (i = strow; i < m; ++i) {
+                System.out.print(a[i][n - 1] + " ");
             }
-
-            // bottom
-            for (int j = ec - 1; j >=sc; j--) {
-                System.out.print(matrix[er][j]);
+            n--;
+ 
+            // Print the last row from the remaining rows */
+            if (strow < m) {
+                for (i = n - 1; i >= stcolumn; --i) {
+                    System.out.print(a[m - 1][i] + " ");
+                }
+                m--;
             }
-
-            // left
-            for (int i = er - 1; i >= sr+1; i--) {
-                System.out.print(matrix[i][sc]);
+ 
+            // Print the first column from the remaining
+            // columns */
+            if (stcolumn < n) {
+                for (i = m - 1; i >= strow; --i) {
+                    System.out.print(a[i][stcolumn] + " ");
+                }
+                stcolumn++;
             }
-
-            sr++;
-            sc++;
-            er--;
-            ec--;
-
-            System.out.println();
         }
     }
 
