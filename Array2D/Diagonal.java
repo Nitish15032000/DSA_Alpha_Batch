@@ -1,10 +1,10 @@
 public class Diagonal {
     public static void main(String[] args) {
         int[][] matrix = {
-                { 3, 2, 1 },
-                { 9, 11, 5},
-                { 6, 0, 13 },
-                { 7, 21, 14 } };
+                { 3, 2, 1, 85 },
+                { 9, 11, 5, 25 },
+                { 6, 0, 13, 25 },
+                { 7, 21, 14, 25 } };
 
         int ans = Diagonalsum(matrix);
         System.out.println(ans);
