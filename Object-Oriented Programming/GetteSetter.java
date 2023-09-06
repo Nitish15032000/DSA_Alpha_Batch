@@ -1,20 +1,27 @@
 
-public class GetteSetter {
+class GetteSetter {
     public static void main(String[] args) {
-        BankAccount p1 = new BankAccount();
-        p1.setpwd("null");
-        System.out.println(p1.getpwd());
+
+        GetSet obj = new GetSet();
+        // Setting the name by calling setter method
+        obj.setName("Nitish Kumar");
+        // Getting the name by calling getter method
+        System.out.println(obj.getName());
     }
 }
 
-class BankAccount{
-    private String pwd;
-     
-    String getpwd(){
-        return this.pwd;
+class GetSet {
+
+    // Member variable of this class
+    private String name;
+
+    // Method 1 - Getter
+    public String getName() {
+        return name;
     }
 
-    void setpwd(String newpwd){
-        this.pwd = newpwd;
+    // Method 2 - Setter
+    public void setName(String N) {
+        this.name = N;
     }
 }

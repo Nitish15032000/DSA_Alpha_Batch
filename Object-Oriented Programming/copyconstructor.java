@@ -8,7 +8,7 @@ public class copyconstructor {
         student s1 = new student("hjg");
         s1.marks[0] = 50;
         s1.marks[1] = 70;
-        s1.marks[3] = 90;
+        s1.marks[2] = 90;
         s1.name = "Nitish";
         s1.password ="abcd";
         System.out.println(s1.password);
