@@ -3,11 +3,11 @@ import java.util.Arrays;
 class SortMarge {
     public static void main(String[] args) {
         int[] arr = {6,3,9,5,2,8};
-        int starting_index = 1;
+        int starting_index = 0;
         int ending_index = arr.length - 1;
         System.out.println(Arrays.toString(arr));
         margeSort(arr, starting_index, ending_index);
-        // System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr));
     }
 
     public static void margeSort(int[] arr, int starting_index, int ending_index) {
@@ -65,8 +65,9 @@ class SortMarge {
         }
 
         // copy the data in temp to originol array
-        for(i = 0, j = starting_index; i < temp.length; i++, j++){
-            arr[j] = temp[i]; 
+        // most important
+        for (i = 0, j = starting_index; i < temp.length; i++, j++) {
+            arr[j] = temp[i];
         }
 
     }
