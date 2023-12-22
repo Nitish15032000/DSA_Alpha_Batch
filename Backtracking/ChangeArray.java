@@ -11,6 +11,8 @@ public class ChangeArray {
         // recursion
         arr[i] = value;
         changeArr(arr, i+1, value+1);
+
+        // clean the stack memory
         arr[i] = arr[i]-2;
     }
 
